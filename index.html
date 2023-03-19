@@ -15,7 +15,7 @@
   </style>
 </head>
 <body>
-<header>
+<header class="burger">
   <img src="./assets/images/logo.svg" alt="">
   <nav class="nav-menu">
     <img class="burger-open" src="./assets/images/icon-menu.svg" alt="">
@@ -24,21 +24,33 @@
       <img class="burger-close" src="./assets/images/icon-menu-close.svg" alt="">
       <li class="nav-menu-item">Home</li>
       <li class="nav-menu-item">New</li>
-      <li class="nav-menu-item">lioliular</li>
+      <li class="nav-menu-item">Popular</li>
       <li class="nav-menu-item">Trending</li>
       <li class="nav-menu-item">Categories</li>
     </ul>
 </header>
-
-<img src="./assets/images/image-web-3-mobile.jpg" alt="">
+<header class="inline">
+  <img src="./assets/images/logo.svg" alt="">
+<nav>
+  <ul class="ul-inline">
+    <li >Home</li>
+    <li >New</li>
+    <li >Popular</li>
+    <li >Trending</li>
+    <li >Categories</li>
+  </ul>
+</header>
+<div class="main-article">
+<img class="main-img" src="./assets/images/image-web-3-mobile.jpg" alt="">
 
   <h1 class="main-title">The Bright Future of Web 3.0?</h1> 
-
+<div class="main-text-and-button">
   <p class="main-p">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the
   people.
   But is it really fulfilling its promise?
 </p>
   <button class="read-me-button">READ MORE</button> 
+</div>
 <div class="new">
   <h2 class="new-title">New</h2>
 <div class="new-article">
@@ -56,9 +68,9 @@
   <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
 </div>
 </div>
-<div class="top-articles">
 
-  <div class="top-article">
+
+  <div class="top-article top-article-1">
     <img class="top-article-img" src="./assets/images/image-retro-pcs.jpg" alt="">
     <div class="top-article-text">
   <p class="rank">01</p>
@@ -67,7 +79,7 @@
   </div>
     </div>
 
-    <div class="top-article">
+    <div class="top-article top-article-2">
       <img class="top-article-img" src="./assets/images/image-top-laptops.jpg" alt="">
   <div class="top-article-text">
   
@@ -77,7 +89,7 @@
     </div>
     </div>
 
-      <div class="top-article">
+      <div class="top-article top-article-3">
         <img class="top-article-img" src="./assets/images/image-gaming-growth.jpg" alt="">
         <div class="top-article-text">
       
@@ -86,7 +98,7 @@
           <p class="article-p">How the pandemic has sparked fresh opportunities.</p>
         </div>
       </div>
-  
+ 
   
   
   
@@ -94,11 +106,19 @@
   const navMenuItems = document.querySelector('.nav-menu-items');
   const burgerOpen = document.querySelector('.burger-open');
   const burgerClose = document.querySelector('.burger-close');
+  const mq = window.matchMedia("(min-width: 450px)");
 
   burgerOpen.addEventListener('click', () => {
-    navMenuItems.style.display = 'flex';
-    burgerOpen.style.display = "none";
-    burgerClose.style.display = "flex";
+    if (mq.matches) {
+     navMenuItems.style.display = "none";
+      burgerClose.style.display = "none";
+      burgerOpen.style.display = "none";
+    } else {
+      navMenuItems.style.display = "flex";
+      burgerOpen.style.display = "none";
+      burgerClose.style.display = "flex";
+     
+    }
     
   });
 
