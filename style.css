@@ -168,6 +168,8 @@ p {
 @media screen and (min-width: 450px) {
     body {
         margin: 5rem;
+        margin-left: 12rem;
+        margin-right: 12rem;
 
     }
 
