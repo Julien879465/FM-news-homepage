@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 1rem;
+    background-color: hsl(36, 100%, 99%);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.nav-items {
+    display: none;
+    margin-right: 1rem;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu-items {
+    display: none;
+    backdrop-filter: blur(5px);
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav-menu-item {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+.burger-close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 010px;
+    
+}
+
+.main-title {
+    font-weight: 800;
+    text-align: left;
+}
+
+.main-p {
+    color: hsl(236, 13%, 42%);
+    font-weight: 500;
+}
+
+.read-me-button {
+    display: flex;
+    height: 45px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.new {
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.new-title {
+    margin: 1rem;
+    color: hsl(35, 77%, 62%);
+}
+
+.new-article {
+    margin: 1rem;
+}
+
+.new-article:not(:last-child) {
+    border-bottom: 1px solid grey;
+    border-bottom-width: 80%;
+    
+}
+
+.top-articles {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-article {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin-bottom: 1rem;
+}
+
+h3, h2 {
+    margin: 0;
+    margin-bottom: 0.25rem;
+}
+
+p {
+    margin:0;
+    margin-bottom: 1rem;
+}
+
+.rank {
+    color: hsl(233, 8%, 79%);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.article-p {
+    color:hsl(240, 100%, 5%);
+    font-weight: 500;
+}
+
+.top-article-img {
+    width: 100%;
+    height: 100%;
+}
+
+.top-article-text {
+    margin: 1rem;
+}
+
